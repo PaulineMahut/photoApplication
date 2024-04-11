@@ -14,11 +14,18 @@
 		{% for photo in photos %}
 			<article class="col-4">
 				<figure>
-					{# <a href="{{path('app_display_photo', {id: photo.id}) }}"><img src="{{ photo.url }}" width="200"></a> #}
+					<a href="{{path('app_display_photo', {id: photo.id}) }}"><img src="{{ photo.url }}" width="200"></a>
 					<figcaption>{{ photo.description }}</figcaption>
 				</figure>
 			</article>
 		{% endfor %}
 	</section>
+{# 
+	<h1>Votre Panier</h1>
+    <ul>
+        {% for productId, quantity in cart %}
+            <li>Produit {{ productId }} : {{ quantity }}</li>
+        {% endfor %}
+    </ul> #}
 
 {% endblock %}

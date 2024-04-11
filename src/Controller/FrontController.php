@@ -26,12 +26,12 @@ class FrontController extends AbstractController
         ]);
     }
 
-    // #[Route('/photo/{id}', name: 'app_display_photo')]
-    // public function displayPhoto(Photo $photo): Response
-    // {
-    //     return $this->render('front/photo.html.twig', [
-    //         'photo' => $photo
-    //     ]);
-    // }
+    #[Route('/photo/{id}', name: 'app_display_photo')]
+    public function displayPhoto(Photo $photo): Response
+    {
+        return $this->render('front/photo.html.twig', [
+            'photo' => $photo
+        ]);
+    }
 }
 
